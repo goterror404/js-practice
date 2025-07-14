@@ -34,3 +34,9 @@ function all(p,fun){
 }
 
 
+//  second attempt 
+
+// .every() runs the given function on every element in the array.
+function all(sequence,fun){
+    return sequence.every(fun)
+}
