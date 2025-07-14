@@ -1,42 +1,31 @@
-
-// Create a method all which takes two params:
-
-    // a sequence
-    // a function (function pointer in C)
-
-// and returns true if the function in the params returns true for every element in the 
-// sequence. Otherwise, it should return false. If the sequence is empty,
-//  it should return true, since technically nothing failed the test.
-
+// Create a method `all` which takes two params:
+//   1. a sequence (array)
+//   2. a function (test condition)
+//
+// It returns:
+//   - true, if the function returns true for EVERY element in the sequence
+//   - false, if the function returns false for even ONE element
+//   - true, if the sequence is EMPTY (nothing failed, so it's considered valid)
 
 
-// the function (all) will return true if, the function in param will return true for 
-// the elements in sequence , and if the sequence is empty it will return false
-
-
-
-
-
-function all(p,fun){
-
-    if(sequence.length === 0){
-        return true
+// First attempt: Manual loop
+function all(p, fun) {
+    if (p.length === 0) {
+        return true;
     }
 
-
-    for(let i = 0; i < p.length; i++){
-        if(!fun(p[i])){
-            return false
+    for (let i = 0; i < p.length; i++) {
+        if (!fun(p[i])) {
+            return false;
         }
     }
 
-    return true
+    return true;
 }
 
 
-//  second attempt 
-
+// Second attempt: Cleaner using .every()
 // .every() runs the given function on every element in the array.
-function all(sequence,fun){
-    return sequence.every(fun)
+function all(sequence, fun) {
+    return sequence.every(fun);
 }
