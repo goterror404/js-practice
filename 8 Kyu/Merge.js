@@ -33,3 +33,24 @@ console.log(mergeArrays([],[]))
 
 
 
+function add(arr1,arr2){
+
+   let odd = []
+
+   for(let i = 0; i < arr1.length; i++){
+    odd.push(arr1[i])
+   }
+
+   for(let i = 0; i<arr2.length; i++){
+    odd.push(arr2[i])
+   }
+   
+  let sort = odd.sort((a,b) => a-b )
+
+   const noDuplicates = sort.filter((value, index) => sort.indexOf(value) === index);
+
+    return noDuplicates
+}
+
+
+add([1,2,3,4,5,6,7],[3,2,4,7,4,1,8,9,23])
