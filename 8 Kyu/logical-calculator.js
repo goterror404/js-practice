@@ -58,9 +58,9 @@ function logicalCalc(array, op){
     return false
   }
 
-  if(op === "XOR"){
-    return array.filter(Boolean).length % 2 === 1;
-  }
+  // if(op === "XOR"){
+  //   return array.filter(Boolean).length % 2 === 1;
+  // }
 
 }
 
